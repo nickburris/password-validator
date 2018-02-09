@@ -17,8 +17,10 @@ public class ValidatorTest{
 	@Test
 	public void worstPasswordPassesNoTests(){
 		Validator validator = new Validator();
-		
-		assertEquals(1, validator.validate("password"));
-		assertEquals(1, validator.validate("bad"));
+
+		// Bad password 'password' should pass the length test and not all the same letter
+		assertEquals(2, validator.validate("password"));
+		// Bad password 'bad' should pass the not 'password' test and not all the same letter
+		assertEquals(2, validator.validate("bad"));
 	}
 }
