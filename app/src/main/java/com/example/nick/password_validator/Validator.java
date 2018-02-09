@@ -1,3 +1,5 @@
+package com.example.nick.password_validator;
+
 public class Validator{
 	public static int NUM_TESTS = 2;
 	
